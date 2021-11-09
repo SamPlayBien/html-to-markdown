@@ -1,0 +1,15 @@
+version: "3"
+services:
+  convert:
+    build : .
+    image: markdown:latest
+    environment:
+      - URL=${URL}
+    volumes:
+      - ./markdown:/var/tmp
+  editor:
+    image: titpetric/pendulum
+    volumes:
+      - ./markdown:/app/contents
+    ports:
+      - 8080:8080
