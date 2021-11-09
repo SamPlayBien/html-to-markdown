@@ -12,4 +12,4 @@ services:
     volumes:
       - ./markdown:/app/contents
     ports:
-      - 8080:8080
+      - ${port}:8080
