@@ -6,11 +6,11 @@ Ensuite on utilise l'éditeur de markdown pendulum afin d'avoir un aperçu direc
 
 ## Installation
 
-Mettre les fichiers du dépôt dans la directory souhaitée. Vous devez lancer le automtique.sh dans cette directory
-Par défaut, accédez à l'édition de votre fichier .md dans le dossier markdown.
-Pour modifier le chemin ou le nom du dossier, Ouvrez le fichier docker-compose.yml :
+Mettre les fichiers du dépôt dans la directory souhaitée. Vous devrez lancer le script d'éxecution dans cette directory.
+Par défaut, vous accéderez à l'édition de vos fichiers .md dans le dossier créé automatiquement nommé 'markdown'.
 
-Modifiez le chemin dans la section local dans la section "volumes" (ici markdown) :
+Pour modifier le chemin ou le nom du dossier, Ouvrez le fichier docker-compose.yml.
+Le chemin de stockage de vos fichiers .md en local se situe dans la section "volumes" (markdown par défaut) :
 ```
 volumes:
    - ./markdown:/var/tmp
@@ -22,16 +22,18 @@ volumes:
 
 ## Usage
 
-Lancer le script **automatique.sh** dans votre terminal (et dans le directory ou vous avez décompréssé l'archive)
+Lancer le script **automatique.sh** dans votre terminal (et dans la directory ou vous avez décompréssé l'archive)
 
 ```shell
 ./automatique.sh
 ```
-Dans votre terminal rentrez l'URL html que vous souhaiter convertir.
+Dans votre terminal rentrez l'URL html que vous souhaitez convertir.
 
-Puis rentrer le port sur lequel vous voulez que la page s'affiche.
+Puis rentrez le port http local à ouvrir pour afficher la page dans votre navigateur.
 
 **Au premier lancement, les images se télécharge (il est donc normal que le navigateur se lance sur une page d'erreur de connexion), vous pouvez voir l'avancé du téléchargement dans votre terminal**
+
+Rafraîchissez la page.
 
 Une fois sur l'interface pendulum, vous pourrez accéder à vos fichier markdown par le dossier /contents/.
 Vous aurez ainsi un aperçu du rendu html de votre page markdown.
