@@ -2,10 +2,10 @@
 
 > .env
 
-echo "Rentrer l'url html que vous voulez convertir"
+echo "Rentrer l'URL de la page HTML à convertir en Markdown :"
 read URL
 
-echo "rentrer le port sur lequel vous voulez vous connecter"
+echo "Rentrer le port à ouvrir pour afficher l'éditeur :"
 read port
 
 echo "URL=$URL" >> .env
